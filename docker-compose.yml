@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  prisma:
+    build: .
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_USER=sampleuser
+      - DATABASE_NAME=sampleuser
+      - DATABASE_PASSWORD=mysecretpassword
+      - HTPASSWD=user:PD2dnZvU1lByc # user, passw0rd
+    ports:
+      - 80:80
